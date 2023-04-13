@@ -79,7 +79,7 @@ export default function Toners() {
     <>
       <PageLayout>
         <div>
-          <h2>CRUD App</h2>
+          <h2>Tabla de Toners</h2>
           <div>
             <CrudForm
               createData={createData}
