@@ -14,7 +14,7 @@ export default function Toners() {
 
   const getData = async () => {
     const res = await axios.get(
-        "https://back-informatica.vercel.app/:8080/api/toner"
+        "https://back-informatica.vercel.app:8080/api/toner"
       ),
       json = await res.data;
     setDb(json);
