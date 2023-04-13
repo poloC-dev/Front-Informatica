@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import TableCell from "@mui/material/TableCell";
 import TableRow from "@mui/material/TableRow";
 import Button from '@mui/material/Button';
+import { Container } from '@mui/material';
 
 const initialForm = {
   brand: "",
@@ -56,7 +57,7 @@ export default function CrudForm ({createData, updateData, setDataToEdit, dataTo
 
 
   return (
-    <div>
+    <Container sx={{marginBottom: 5,marginTop: 5 }}>
       <h3>{dataToEdit ? "Editar" : "Agregar"}</h3>
       <form onSubmit={handleSubmit}>
         <input
@@ -91,7 +92,7 @@ export default function CrudForm ({createData, updateData, setDataToEdit, dataTo
         <input type="submit" value="Enviar"/>
         <input type="reset" value="Limpiar" onClick={handleReset} />
       </form>
-    </div>
+    </Container>
   );
 };
 

@@ -13,7 +13,9 @@ export default function Toners() {
   const [loading, setLoading] = useState(false);
 
   const getData = async () => {
-    const res = await axios.get("http://localhost:8080/api/toner"),
+    const res = await axios.get(
+        "https://back-informatica.vercel.app/:8080/api/toner"
+      ),
       json = await res.data;
     setDb(json);
   };
@@ -29,7 +31,10 @@ export default function Toners() {
       headers: { "content-type": "application/json" },
       data: JSON.stringify(newToner),
     };
-    let res = await axios("http://localhost:8080/api/toner", options),
+    let res = await axios(
+        "https://back-informatica.vercel.app:8080/api/toner",
+        options
+      ),
       toner = await res.data;
     getData();
   };
@@ -37,7 +42,7 @@ export default function Toners() {
   const updateData = async (tonerToUpdate) => {
     let { _id } = tonerToUpdate;
     console.log("toner", tonerToUpdate);
-    let endpoint = `http://localhost:8080/api/toner/${_id}`;
+    let endpoint = `https://back-informatica.vercel.app:8080/api/toner/${_id}`;
 
     let options = {
         method: "PUT",
@@ -56,8 +61,7 @@ export default function Toners() {
     );
 
     if (isDelete) {
-      console.log("se ejecuto el delete");
-      let endpoint = `http://localhost:8080/api/toner/${_id} `;
+      let endpoint = `https://back-informatica.vercel.app:8080/api/toner/${_id} `;
 
       let options = {
           method: "DELETE",

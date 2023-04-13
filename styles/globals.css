@@ -1,0 +1,17 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+    color: inherit;
+  }
+  
+html{
+    font-family: 'Roboto', 'Nunito', sans-serif;
+}
+
+  input{
+    padding: .5rem;
+    margin: .5rem .7rem 0 0;
+  }
