@@ -23,6 +23,7 @@ export default function CrudTable({data,setDataToEdit,deleteData,setQuantity,qua
             <TableCell align="right">Modelo</TableCell>
             <TableCell align="right">Impresora</TableCell>
             <TableCell align="right">Cantidad</TableCell>
+            <TableCell align="right">Ubicacion</TableCell>
           </TableRow>
         </TableHead>
         <TableBody>

@@ -12,6 +12,7 @@ export default function CrudTableRow ({ toner, deleteData, setDataToEdit}) {
         <TableCell align="right">{toner.model}</TableCell>
         <TableCell align="right">{toner.printer}</TableCell>
         <TableCell align="right">{toner.quantity}</TableCell>
+        <TableCell align="right">{toner.ubication}</TableCell>
         <TableCell align="center">
           <Button onClick={()=>setDataToEdit(toner)} variant="outlined">Editar</Button>
         </TableCell>

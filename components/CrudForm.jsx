@@ -1,7 +1,4 @@
 import { useEffect, useState } from "react";
-import TableCell from "@mui/material/TableCell";
-import TableRow from "@mui/material/TableRow";
-import Button from '@mui/material/Button';
 import { Container } from '@mui/material';
 
 const initialForm = {
@@ -9,6 +6,7 @@ const initialForm = {
   model: "",
   printer: "",
   quantity:"",
+  ubication: "",
   _id: null,
 };
 
@@ -35,7 +33,7 @@ export default function CrudForm ({createData, updateData, setDataToEdit, dataTo
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    if (!form.brand || !form.model || !form.printer) {
+    if (!form.brand || !form.model || !form.printer || !form.ubication) {
       alert("Datos incompletos");
       return;
     }
@@ -73,6 +71,13 @@ export default function CrudForm ({createData, updateData, setDataToEdit, dataTo
           placeholder="Modelo"
           onChange={handleChange}
           value={form.model}
+        />
+        <input
+          type="text"
+          name="ubication"
+          placeholder="Ubicacion"
+          onChange={handleChange}
+          value={form.ubication}
         />
         <input
         type="text"
